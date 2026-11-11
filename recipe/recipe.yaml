@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.0.11"
+  version: "1.0.12"
 
 package:
   name: arxiv-latex-cleaner
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/arxiv-latex-cleaner/arxiv_latex_cleaner-${{ version }}.tar.gz
-  sha256: 13884594a0fadbe4a055e594a67b9a9be9a418453edadc8db1810bf801322f9b
+  sha256: e9ebb423ebca5351b5f7caadd7746eec450a8d6f9909cfca57d7379bd1be2281
 
 build:
   number: 0
@@ -36,7 +36,9 @@ tests:
       imports:
         - arxiv_latex_cleaner
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - requirements:
       run:
         - pip
