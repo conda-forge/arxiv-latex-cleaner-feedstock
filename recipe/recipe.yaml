@@ -17,7 +17,7 @@ build:
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
     entry_points:
-      - arxiv_latex_cleaner=arxiv_latex_cleaner.__main__:__main__
+      - arxiv_latex_cleaner=arxiv_latex_cleaner.__main__:main
 
 requirements:
   host:
